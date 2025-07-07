@@ -1,0 +1,255 @@
+/*
+This style file is imported by Navbar.js which is called by CsVersionPage.js file, ServiceInventoryPage.js file, PltVersionPage.js file.
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0%;
+  padding-right: 0.8%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-right: 1%;
+  margin-left: 5%;
+  background-color: #0C3135;
+  color: #fff;
+  position: fixed;
+  width: 93%;
+  z-index: 10; 
+  border-radius: 18px;
+}
+
+.app-name {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.navbar button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Rest of the CSS remains the same */
+.navbar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar button.active {
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar button::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.navbar button::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover::before,
+.navbar button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 321px) {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    height:5vh;
+  }
+
+  .app-name {
+    font-size: 10px;
+    left:30%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 376px)  {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    height:5vh;
+  }
+
+  .app-name {
+    font-size: 16px;
+    left:30%;
+  }
+}
+
+@media  (min-width: 376px) and (max-width: 426px)  {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    height:5vh;
+  }
+
+  .app-name {
+    font-size: 16px;
+    left:30%;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .navbar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .app-name {
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .navbar button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .navbar {
+    width: 92%;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    margin-left:5%;
+    margin-right: 5%;
+    border-radius: 16px;
+  }
+  .app-name {
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 8px;
+  }
+  .navbar button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .navbar {
+    width: 92%;
+    height:5vh;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    margin-left:5%;
+    margin-right: 5%;
+    border-radius: 16px;
+  }
+  .app-name {
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 8px;
+  }
+  .navbar button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1921px){
+  .navbar {
+    width: 92%;
+    height:4vh;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+    margin-left:5%;
+    margin-right: 5%;
+    border-radius: 16px;
+  }
+  .app-name {
+    font-size: 22px;
+  }
+  .navbar-right {
+    gap: 8px;
+    font-size: 22px;
+  }
+  .navbar button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
